@@ -1,0 +1,28 @@
+include<iostream>
+#include<conio.h>
+using namespace std;
+
+/* Overloading of generic function(Function template)*/
+
+template < class t >
+
+t  sum(t a , t b){
+    return a + b;
+}
+
+
+template < class t >        // <---- This line is important write it once to overload
+t sum(t a , t b , t c){
+    return a + b + c;
+}
+
+int main(){
+   // clrscr();
+cout<<"two int sum = "<<sum(1,2)<<endl;
+cout<<"two float sum = "<<sum(1.1,2.2)<<endl;
+cout<<endl;
+cout<<"three int sum = "<<sum(1,2,3)<<endl;
+cout<<"three float sum = "<<sum(1.1,2.2,3.3)<<endl;
+return 0;
+
+}
