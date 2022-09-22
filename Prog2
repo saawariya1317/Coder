@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+   /* float physics , chemistry , maths, total, percentage;
+    printf("enter the marks scored by student out of 100 in PCM\n");
+    scanf("%f%f%f", &physics,&chemistry,&maths);
+    total = physics + chemistry + maths;
+    percentage = total/3;
+     
+    if (percentage>40 && physics>33 && chemistry>33 && maths>33)
+    {    printf("you got total %f percentage\n",percentage);
+    }
+    else
+   { printf("you are fail\n");
+    } */
+    
+    int a,b,c,d;
+    printf("enter the four numbers\n");
+    scanf("%d%d%d%d", &a,&b,&c,&d);
+    if(a>b && a>c && a>d)
+        {printf("the biggest no. is %d",a);}
+    else if(b>a && b>c && b>d)
+        {printf("the biggest no. is %d",b);}
+    else if(c>a && c>b && c>d)
+       { printf("the biggest no. is %d",c);}
+    else
+    {printf("the biggest no. is %d",d);}
+    
+    
+    
+    return 0;
+}
