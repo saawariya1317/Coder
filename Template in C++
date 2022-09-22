@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include<iostream>
+#include<conio.h>
+#include<iomanip>
+using  namespace std;
+
+template   <class  t >       // t is called as "Place holder" name can be change from t to anything
+float sum(t a , t b){
+    return a + b;
+}
+
+
+template  < class t1 , class t2 , class t3 >           // This is called as generic function overloading OR
+float sum(t1 a , t2 b , t3 c){     //  function template overloading
+    return a + b + c;
+}
+
+int main(){                     
+
+/**Here important thing is that we can't do operation of diff diff data types by 
+ * declaring in one (same) class.
+ In this condition we will define more than one classses according to number of data types */
+
+
+
+    
+    //int a,b;
+    //cout<<"enter number for initialising i"<<endl;
+    //  cin>>a;
+    //  cin>>b;
+    
+    // for(int i=a;i<(int) b ;i++)
+    
+    cout<<"This is int and int sum: "<<setw(50)<<sum(1.11,3.33)<<endl; 
+    cout<<"This is float and float sum: "<<setw(50)<<sum(2.2,1.1)<<endl;
+    cout<<"This is int and float sum: "<<setw(50)<<sum(3.33 , 4.333)<<endl;
+    
+    cout<<endl;
+    
+    cout<<"This is sum of 3 arguments with diff. diff. data types: "<<setw(50)<<sum(1   , 2.2 , 3)<<endl;
+    cout<<"This is sum of 3 arguments with diff. diff. data types: "<<setw(50)<<sum(2.2 , 3   ,  4.2)<<endl;
+    cout<<sum(1 , 1.11 , 3.3);
+    return 0;   
+}
