@@ -11,7 +11,7 @@
    
 //   printf("How many Samosha you want Sir/Mam\n");
 //}
-
+//
 int main()
 {
     int variety, user;
