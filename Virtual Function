@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+
+class Base{
+    int var_Base;
+    public:
+    void setData(int a){
+        var_Base = a;
+    }
+   /*virtual*/virtual void display(){
+        cout<<"1.The value of var_base of Base class is: "<<var_Base<<endl;
+    }
+    
+};
+
+class Derived : public Base{
+  int var_Derived;
+  public:
+  
+  void setData(int b){
+    var_Derived = b;  
+  }
+  
+  void display(){
+      cout<<"2.The value of var_Derived of Derived class is: "<<var_Derived<<endl;
+  }
+  
+};
+
+
+int main(){
+    
+    //1.Using new keyword creating pointer object for Both class and memeber function using arrow operator.
+    Base *Base_class_pointer = new Base;             //creating pointer object dynamically for Base class(easyV)
+    Base_class_pointer->setData(5);
+    Base_class_pointer->display();
+    
+    Derived *Derived_class_pointer = new Derived;    //creating pointer object dynamically for Derived class
+    Derived_class_pointer->setData(9);
+    Derived_class_pointer->display();
+    cout<<"<<<<<------------------------------------->>>>>>\n"<<endl;
+    
+    
+    
+    //2.creeating objects normally and calling memeber function through Dot operator
+    Base obj_Base;              //creating object
+    Derived obj_Derived;        //creating object
+    
+    obj_Base.setData(110);
+    obj_Base.display();
+    obj_Derived.setData(120);
+    obj_Derived.display();
+    cout<<"<<<<<------------------------------------->>>>>>\n"<<endl;
+    
+    
+    
+    //*****Now pointing base class pointer to derived class. (Run Time polymorphism)*********
+    Base_class_pointer = &obj_Derived;
+    Base_class_pointer->setData(777);  //$$^^IMP^^$$ We cannot set the value of derived class setdata() using Base_class_pointer because this pointer is of base class..
+    Base_class_pointer->display();          
+    /* ^^^IMP^^^ --> BY DEFAULT ,This will call base class display not derived class.(BIND TO THAT DISPLAY FUNCTION OF BASE --> LATE BINDING ) 
+       BUT IF THERE IS VIRTUAL KEYWORD IN BASE CLASS DISPLAY FUNCTION THENNN IT WILL CALL DERIVED CLASS DISPLAY FUNCTION..like below
+                //  virtual void display(){
+                        cout<<"1.The value of var_base of Base class is: "<<var_Base<<endl;
+                                  }
+    */
+
+
+    return 0;
+}
