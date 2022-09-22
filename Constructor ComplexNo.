@@ -1,0 +1,69 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include<iostream>
+using namespace std;
+
+// class A {
+//     public:
+//         void funcA(){
+//             cout<<"A function\n";
+//                   }
+// };
+
+// class B : public A{ 
+//         public:
+//         void funcB(){
+//             cout<<"B function\n";
+//                     }
+//         };
+        
+// class C : public B {
+//         public:
+    
+// };
+
+class constructo{
+        int a,b;
+        public:
+
+        constructo(void);
+        // {
+        //     int a=8;
+        //     int b=8;
+        //     cout<<a<<b<<endl;
+        
+        // }
+        
+        void printno(){
+            cout<<"the value is "<<a<<"\t+ i"<<b<<endl;
+        }
+        
+        // ~constructo(){
+        //     cout<<"Constractor Destroyed\n";
+        // }
+    
+};
+
+constructo :: constructo(){
+     a=9;
+     b=6;
+}
+
+
+
+
+int main()
+{
+//     C c ;
+//     c.funcA();
+//   c.funcB();
+    constructo gopal;
+    gopal.printno();
+   
+}
