@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include<stdlib.h>
+// #include<iomanip.h>  //C++ headerfile
+
+// float snacks(int Samosha , int DahiChaat , int Bhelpuri , int Sevpuri , int Dhokla){
+//   printf("******** Welcome to Haldiram Restaurant of Lucknow *********\n");
+//   printf("******** Here is the menu of our restaurant for you *********\n");
+//   printf("\n\n");
+//   printf(" 1: Samosha\n 2: DahiChaat\n 3: Bhelpuri\n 4: Sevpuri\n 5: Dhokla\n");
+//   printf("\n Enter the Quantity of your Snacks\n");
+   
+//   printf("How many Samosha you want Sir/Mam\n");
+//}
+
+int main()
+{
+    int variety, user;
+     int Samosha=0,DahiChaat=0,Bhelpuri=0,Sevpuri=0,Dhokla=0;
+   printf("*** Welcome to Haldiram Restaurant of Lucknow ***\n");
+   printf("*** Here is the menu of our restaurant for you ***\n\n");
+   
+  while(variety != 0){
+  printf("Samosha:   Rs10\nDahiChaat: Rs50\nBhelpuri:  Rs30\nSevpuri:   Rs50\nDhokla:    Rs80\nPress 0 For exit\n\n");
+  scanf("%d",&variety);
+    switch(variety){
+            case 1:{ 
+            printf("Enter total number of samosha you want: ");
+            scanf("%d",&Samosha);
+            break;
+            }
+           
+            case 2:{
+            printf("Enter total number of DahiChaat you want: ");
+            scanf("%d",&DahiChaat);
+            break;
+            }
+        
+            case 3:{
+            printf("Enter total number of Bhelpuri you want: ");
+            scanf("%d",&Bhelpuri);
+            break;
+            }
+        
+            case 4:{
+            printf("Enter total number of Sevpuri you want: ");
+            scanf("%d",&Sevpuri);
+            break;
+            }
+        
+            case 5:{
+            printf("Enter total number of Dhokla you want: ");
+            scanf("%d",&Dhokla);
+            break;
+            }
+            
+            case 0:{
+                exit(0);
+            }
+            default:{
+            printf("Invalid input\n");
+            exit(0);
+            }
+                      }     //switch end
+// continue;
+  printf("Anything else you want (if yes press 10): ");
+  scanf("%d",&user);
+  if(user==10){
+  continue;}
+  else{
+      exit(0);
+  }
+}    //loop end
+
+
+
+printf(" You have ordered for total number of:\nSamosha is %d ,DahiChaat is %d ,Bhelpuri is %d , Sevpuri is %d , Dhokla is %d\n",
+Samosha,DahiChaat,Bhelpuri,Sevpuri,Dhokla);
+
+return 0;
+}
+
+
+
