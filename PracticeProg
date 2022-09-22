@@ -1,0 +1,208 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include<iostream>
+#include<iomanip>
+using namespace std;
+//int c=84;   //Global variable ---> use :: for printing this global value
+int main(){
+    
+  // float a =4, b=1 , c = 6, d=7 ;
+     /* double c;
+    double d = 34.4;
+    
+ /*   cout<<"Enter the value of a:"<<endl;
+    cin>>a;
+    cout<<"Enter the value of b:"<<endl;
+    cin>>b;
+    
+    cout<<"The value of a is: "<<a<<endl<<"The value of b is: "<<b<<endl;
+    c = a+b;                        //Local variable
+    cout<<"The sum is "<<c<<endl;
+    cout<<"The value of c is: "<<c<<endl;
+     cout<<"The value of global c is: "<<::c<<endl;
+    cout<<"The size of 34.4 is "sizeof(34.4f);
+    cout<<"The value of a is "<<(float)(a)<<endl;
+    cout<<"The value of a is "<<float(a)<<endl;
+    cout<<"The value of b is "<<(float)(b)<<endl;
+     a =5 , b = 8;  */
+     
+     
+    // cout<<"The value of a is: "<<a<<endl;
+    // cout<<"The value of b is: "<<b<<endl;
+    // cout<<"The value of c is: "<<c<<endl;
+    // cout<<"The value of d is: "<<d<<endl;
+    
+    // cout<<"The value of a with setw is: "<<setw(10)<<a<<endl;
+    // cout<<"The value of b with setw is: "<<setw(10)<<b<<endl;
+    // cout<<"The value of c with setw is: "<<setw(10)<<c<<endl;
+    // cout<<"The value of d with setw is: "<<setw(10)<<d<<endl;
+   // cout<<a*b+c/d-c*b;
+    
+    // int age=0;
+    //  cout<<"Tell me your age"<<endl;
+    //  cin>>age;
+    
+    
+    // if(age<18)
+    // {
+    //     cout<<"You are under 18 and you can't drive"<<endl;
+        
+    // }
+    // else if(age>18 && age<=100)
+    // {
+    //     cout<<"You can drive"<<endl;
+    // }
+    // else
+    // {
+    //     cout<<"Invalid age"<<endl;
+       
+    // }
+    
+    // switch(age){
+    //             case 18:{
+    //                   cout<<"You are 18"<<endl;
+    //                   break;
+    //             }
+                
+    //             case 25:{
+    //                 cout<<"You are 25"<<endl;
+    //                 break;
+    //             }
+                
+    //             case 100:{
+    //                 cout<<"You are 100"<<endl;
+    //                 break;
+    //             }
+                
+    //             default:{
+    //                 cout<<"Special case not found";
+    //                 break;
+    //           }}
+    
+    // int e , o ;
+    
+    // cout<<"Enter number"<<endl;
+    // cin>>e;
+    
+    // if(e%2 == 0)
+    // {
+        
+    //         for(e=0;e<=100;e++)
+    //         {
+    //             cout<<"The even numbers upto 100 are: "<<setw(5)<<e<<endl;
+    //             ++e;
+    //         }
+    // }
+       
+    // else
+    // {
+        
+    //     for(e=e;e<=100;e++)
+    //         {
+    //             cout<<"The odd numbers upto 100 are: "<<setw(5)<<e<<endl;
+    //             e++;
+    //         }
+    // }
+//     if(e<50)
+// {    
+//     do{
+//         cout<<"The numbers are: "<<e<<endl;
+//         e++;
+//     }
+    
+//     while(e<100);
+// }
+// int a,e=1;
+
+// cout<<"Enter number: "<<endl;
+// cin>>a;
+// do{
+    
+//     cout<<a<<" * "<<e<<" = "<<a*e<<endl;
+//     ++e;
+    
+// }
+// while(e<=10);
+
+// int a =2 ;
+// int*  b = &a;
+// int**   d = &b;         //pointer to pointer
+
+// int ***c = &d;          // pointer to pointer to pointer
+
+// int ****f = &c;         // pointer to pointer to pointer to pointer
+
+
+
+// cout<<a<<endl;
+// cout<<&a<<endl;
+// cout<<b<<endl;
+// cout<<*b;            // Value at address b
+
+// cout<<b<<endl;
+// cout<<d<<endl;
+
+// cout<<c<<endl;
+
+// cout<<f<<endl;
+
+// cout<<&a<<endl;
+// cout<<&(****f)<<endl;          //Value at address  //*******@VERY VERY IMPORTANT****
+
+
+int marks[7] = {2,55,4,33,65,43,22};
+int maths_marks[7];
+
+// cout<<"The marks of student: "<<marks[0]<<endl;
+// cout<<"The marks of student: "<<marks[1]<<endl;
+// cout<<"The marks of student: "<<marks[2]<<endl;
+// cout<<"The marks of student: "<<marks[3]<<endl;
+// cout<<"The marks of student: "<<marks[4]<<endl;
+// cout<<"The marks of student: "<<marks[5]<<endl;
+// cout<<"The marks of student: "<<marks[6]<<endl;
+
+maths_marks[0] = 88;
+maths_marks[1] = 99;
+maths_marks[2] = 55;
+maths_marks[3] = 55;
+maths_marks[4] = 44;
+maths_marks[5] = 56;
+maths_marks[6] = 88;
+
+cout<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[0]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[1]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[2]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[3]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[4]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[5]<<endl;
+// cout<<"The maths marks of student: "<<maths_marks[6]<<endl;
+
+int i;
+
+do
+    {
+        cout<<"The marks are: "<<marks[i]<<endl;
+        i++;
+    }
+while(i<7);
+
+cout<<endl;
+
+int j;
+do
+    {
+        cout<<"The maths marks are: "<<maths_marks[j]<<endl;
+        j++;
+    }
+while(j<7);
+
+        
+     return 0;
+}
