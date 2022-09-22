@@ -1,0 +1,61 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+// PROGRAM FOR SUM OF ELEMENTS OF A MATRIX
+
+#include<stdio.h>
+#include<malloc.h>
+void
+main ()
+{
+  int i, j, x, y, sum = 0, d1 = 0, d2 = 0;
+  int (*p)[3];
+
+
+  printf ("Enter the order of matrix:\n ");
+  scanf ("%d%d", &x, &y);
+
+
+  if (x != y)
+    {
+      printf ("Not a square matrix \n");
+      return;
+    }
+
+  p = (int *) malloc (x * y * sizeof (int));
+
+  printf ("enter elements:\n");
+  for (i = 0; i < x; i++)
+    
+       for (j = 0; j < y; j++)
+    	
+	       scanf ("%d", *(p + i) + j);
+    	
+    
+
+  for (i = 0; i < x; i++)
+    
+    d1 = d1 + *(*(p + i) + i);
+    
+  for (i = 0, j = (y - 1); i< x; i++, j--)
+    
+    d2 = d2 + *(*(p + i) + j);
+    
+
+  for (i = 0; i < x; i++)
+    
+  for (j = 0; j < y; j++)
+	
+  sum += *(*(p + i) + j);
+	
+    
+  printf ("The sum of primary diagnol is %d: \n", d1);
+  printf ("The sum of secondary diagnol is %d: \n", d2);
+  printf ("The sum of all elememts is %d: \n", sum);
+}
+
