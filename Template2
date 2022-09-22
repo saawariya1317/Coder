@@ -1,0 +1,31 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+template  < class t1 , class t2 >
+float sum(t1 a , t2 b ){            // Float is important.
+    return a + b;
+}
+
+template < class t1 , class t2 >
+float sum(t1 a , t2 b , t2 c){      // Float is important we cannot write int.
+    return a + b + c;
+}
+
+
+int main()
+{
+    cout<<setw(5)<<sum(1,2)<<endl;
+    cout<<setw(5)<<sum(1,2,3)<<endl;
+    cout<<setw(5)<<sum(1.11,2.22)<<endl;
+    cout<<setw(5)<<sum(1.11,2)<<endl;
+    cout<<setw(5)<<sum(1,2.22)<<endl;
+    cout<<setw(5)<<sum(1,2,3)<<endl;
+    
+    cout<<setw(5)<<sum(1.1,2,3)<<endl;
+    
+   // cout<<sum(1.1,2.2,3)<<endl;       //  Important,This will give ERROR bcoz b and c should have same data type according to class t2
+    
+    cout<<setw(5)<<sum(1.11,2.2,3.3)<<endl;
+    return 0;
+}
